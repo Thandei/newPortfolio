@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*,
+*::after,
+*::before,
+body,
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html::-webkit-scrollbar {
+    width: 0px;
+    /* For Chrome, Safari, and Opera */
+}
+
+
+/* * {
+    outline: 1px solid red;
+} */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Unvisited link  */
+
+a:visited {
+    color: none;
+}
+
+
+/* Visited link    */
+
+
+/* Mouse over link */
+
+a:active {
+    color: gray;
+}
+
+#header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #2F2E2E;
+}
+
+nav {
+    background-color: #2F2E2E;
+    padding: 1rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.nav-open {
+    position: absolute;
+    top: 5.3rem;
+    right: -100%;
+    /*  -100% */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #2F2E2E;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease;
+}
+
+.nav-open ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 25px;
+    height: 90%;
+    color: white;
+    width: 100%;
+}
+
+.nav-open ul li {
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    transition: all 300ms ease;
+    border: 1px dotted white;
+}
+
+.nav-open ul li:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.nav-open li {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.nav-container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+}
+
+.nav-container ul li {
+    margin: 0.5rem;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-container ul li:after {
+    content: " ";
+    position: absolute;
+    transition: all 100ms ease;
+    top: 1.7rem;
+    left: 0;
+    background-color: white;
+    height: 3px;
+    width: 0px;
+}
+
+.nav-container ul li:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 300ms ease;
+    border-radius: 0.5rem;
+}
+
+.hamburger:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-container ul li:not(:last-child) {
+    margin-right: 50px;
+}
+
+.logo {
+    font-size: 30px;
+    margin-left: 0.5rem;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* hero css */
+
+.row-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img {
+    width: 30%;
+}
+
+.img img {
+    width: 100%;
+}
+
+.hero-write {
+    width: 30%;
+}
+
+#hero-text {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+}
+
+.hero-img img {
+    display: inline-block;
+    border-radius: 1rem;
+    width: 30rem;
+    height: 40rem;
+}
+
+.hero-img {
+    width: 100px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subside {
+    margin-top: 4rem;
+}
+
+#about-me {
+    background-color: white;
+}
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+.about-h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 50px;
+    color: #2F2E2E;
+    margin-bottom: 2rem;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-card {
+    width: 18rem;
+    display: inline-block;
+    height: 10rem;
+    background-color: white;
+    margin: 0 3rem;
+    border: 3px dotted #2F2E2E;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0.5;
+    cursor: pointer;
+    font-family: "Ubuntu", sans-serif;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: all 200ms ease;
+}
+
+.about-card p {
+    font-size: 20px;
+    transform: translateZ(20px)
+}
+
+.about-card:hover {
+    opacity: 1;
+    transform: scale(1.1)
+}
+
+.subside {
+    text-align: center;
+}
+
+.scrollDownBtn {
+    display: inline-block;
+    padding: 2rem;
+    height: 1rem;
+    width: 30px;
+    border-radius: 3rem;
+    border: 2px solid white;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    transition: all 200ms ease-out;
+    cursor: pointer;
+}
+
+.scrollDownBtn i {
+    position: absolute;
+    top: 50;
+    left: 50;
+    transform: translate(-50%, -50%);
+}
+
+.scrollDownBtn:hover {
+    transform: scale(1.2)
+}
+
+.mention-container {
+    padding-bottom: 5rem;
+}
+
+.mention-container img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 5rem;
+    margin-right: 3rem;
+}
+
+.mention-container .col-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px dotted gray;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.mention-container p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 25px;
+}
+
+
+/* cards css */
+
+.img-skill {
+    width: 100%;
+}
+
+.card-inner {
+    padding-top: 1rem;
+}
+
+
+/* card after */
+
+.about-card {
+    position: relative;
+}
+
+.about-card:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: lightgray;
+    z-index: -1;
+    transition: all 300ms ease;
+}
+
+.about-card:hover:after {
+    width: 100%;
+}
+
+.about-card:hover .fa-linkedin {
+    color: #0072b1;
+}
+
+.about-card:hover .fa-instagram {
+    color: white;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+
+/* testimonials */
+
+#testimonials {
+    background-color: #2F2E2E;
+    min-height: 100vh;
+    padding-top: 3rem;
+}
+
+.my-flipster {
+    height: 500px;
+    overflow-y: hidden !important;
+    overflow-x: hidden;
+}
+
+.my-flipster li img {
+    height: 100%;
+    width: 100%;
+}
+
+.flipster__button {
+    font-size: 15px;
+    color: white;
+}
+
+.container-testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.test-text {
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    font-size: 20px;
+    height: 100%;
+}
+
+
+/* contact */
+
+#contact {
+    background-color: black;
+}
+
+.container-contact {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    height: 100vh;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-contact a {
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.test-text {
+    text-align: center;
+    line-height: 25px;
+}
+
+.test-text a {
+    background-color: black;
+    padding: 0.8rem;
+    border-radius: 3rem;
+    transition: background-color 300ms ease;
+}
+
+.test-text a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.swiper-container {
+    margin-top: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+}
+
+.swiper-slide {
+    background: #2F2E2E !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: gray !important;
+}
+
+.footer-container {
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.backtoTop {
+    font-size: 2rem;
+    padding: 0.5rem;
+    width: 55px;
+    text-align: center;
+    background-color: darkgrey;
+    border-radius: 1rem;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.backtoTop:hover {
+    box-shadow: 0 0 1px 7px lightgray;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width:1250px) {
+    .img {
+        display: none;
+    }
+    .hero-write {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10rem;
+    }
+    .hero-content {
+        margin-top: 15rem;
+    }
+    .nav-list {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+@media screen and (max-width:1171px) {
+    .about-cards {
+        width: 100%;
+    }
+    .about-card {
+        padding-top: 1rem;
+    }
+    .about-card p {
+        font-size: 0;
+    }
+}
+
+@media screen and (max-width:988px) {
+    .test-text {
+        width: 100%;
+    }
+    .nav-list {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1010px) {
+    .about-card {
+        width: 5rem;
+        height: 5rem;
+    }
+    .card-inner {
+        padding-top: 0;
+    }
+    .card-back h3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1630px) {
+    .hero-content {
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .swiper-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .mention-container .col-1 {
+        flex-direction: column;
+    }
+    .mention-container img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .about-cards {
+        width: 420px;
+    }
+    .container-about {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
