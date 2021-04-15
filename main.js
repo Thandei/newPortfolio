@@ -34,8 +34,9 @@ if(!açık){
 }else{
   document.querySelector(".nav-open").style.right=-100+"%";
   document.querySelector("body").style.overflowY="visible";
+  document.querySelector("body").style.overflowX="hidden";
   açık=false;
-  return
+  return;
 }
 
  
