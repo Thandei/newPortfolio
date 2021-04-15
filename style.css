@@ -481,6 +481,7 @@ nav {
     z-index: 1;
     cursor: pointer;
     transition: all 300ms ease;
+    display: block;
 }
 
 .backtoTop:hover {
@@ -573,5 +574,11 @@ nav {
     .container-about {
         margin-right: 0;
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .hero-content {
+        margin-top: 7rem;
     }
 }
