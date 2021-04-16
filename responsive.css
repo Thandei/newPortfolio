@@ -84,6 +84,12 @@
         margin-right: 0;
         margin-left: 0;
     }
+    #hero-text {
+        font-size: 3rem;
+    }
+    .about-h2 {
+        padding-top: 2rem;
+    }
 }
 
 @media screen and (max-width:430px) {
@@ -96,14 +102,8 @@
     .subside {
         margin-top: 0;
     }
-    #hero-text {
-        font-size: 3rem;
-    }
     .about-cards {
         width: 400px;
-    }
-    .about-h2 {
-        padding-top: 2rem;
     }
     .mention-container p {
         font-size: 20px;
