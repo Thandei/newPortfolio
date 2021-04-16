@@ -95,7 +95,8 @@ nav {
     padding: 1rem;
     width: 100%;
     transition: all 300ms ease;
-    border: 1px dotted white;
+    border: 1px solid white;
+    border-radius: 1rem;
 }
 
 .nav-open ul li:hover {
